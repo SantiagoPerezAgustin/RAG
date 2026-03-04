@@ -1,0 +1,2 @@
+P: ¿Cómo restablezco mi contraseña?
+R: Entrá a "¿Olvidaste tu contraseña?" en la pantalla de login y seguí el enlace que te llega por email.
