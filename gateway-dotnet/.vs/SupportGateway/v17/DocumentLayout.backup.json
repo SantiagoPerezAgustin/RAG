@@ -22,21 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 11,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\santi\\Desktop\\Work\\(RAG)\\gateway-dotnet\\SupportGateway.Api\\Program.cs",
-              "RelativeDocumentMoniker": "SupportGateway.Api\\Program.cs",
-              "ToolTip": "C:\\Users\\santi\\Desktop\\Work\\(RAG)\\gateway-dotnet\\SupportGateway.Api\\Program.cs",
-              "RelativeToolTip": "SupportGateway.Api\\Program.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAAAC8AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T19:46:52.907Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -83,6 +70,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\santi\\Desktop\\Work\\(RAG)\\gateway-dotnet\\SupportGateway.Api\\Program.cs",
+              "RelativeDocumentMoniker": "SupportGateway.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\santi\\Desktop\\Work\\(RAG)\\gateway-dotnet\\SupportGateway.Api\\Program.cs",
+              "RelativeToolTip": "SupportGateway.Api\\Program.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAYwC8AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T19:46:52.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\Work\\(RAG)\\gateway-dotnet\\SupportGateway.Api\\appsettings.json",
@@ -91,21 +91,19 @@
               "RelativeToolTip": "SupportGateway.Api\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-05T19:45:20.829Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-05T19:45:20.829Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "SupportGateway.Api",
+              "Title": "SupportGateway.Api.csproj",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\Work\\(RAG)\\gateway-dotnet\\SupportGateway.Api\\SupportGateway.Api.csproj",
               "RelativeDocumentMoniker": "SupportGateway.Api\\SupportGateway.Api.csproj",
               "ToolTip": "C:\\Users\\santi\\Desktop\\Work\\(RAG)\\gateway-dotnet\\SupportGateway.Api\\SupportGateway.Api.csproj",
               "RelativeToolTip": "SupportGateway.Api\\SupportGateway.Api.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-05T19:44:52.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-05T19:44:52.595Z"
             }
           ]
         }

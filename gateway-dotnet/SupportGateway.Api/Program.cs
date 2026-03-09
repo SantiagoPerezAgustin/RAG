@@ -1,4 +1,7 @@
 using System.Net.Http.Json;
+using System.Text.Json;
+using Microsoft.EntityFrameworkCore;
+using SupportGateway.Api.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +21,9 @@ builder.Services.AddCors(options =>
     });
 });
 
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 var app = builder.Build();
 app.UseCors();
 
@@ -33,23 +39,34 @@ app.MapPost("/api/chat", async (HttpContext context, IHttpClientFactory factory)
     if (!response.IsSuccessStatusCode)
         return Results.Json(new { detail = await response.Content.ReadAsStringAsync() }, statusCode: (int)response.StatusCode);
 
-    var data = await response.Content.ReadFromJsonAsync<ChatResponse>();
+    var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+    var data = await response.Content.ReadFromJsonAsync<ChatResponse>(options);
     return Results.Ok(data);
 });
 
-// Log de conversación (por ahora en memoria; después podés reemplazar por SQL Server)
-var conversationLog = new List<ConversationLogEntry>();
-app.MapPost("/api/conversations/log", (ConversationLogRequest req) =>
+// POST: guarda conversación en SQLite
+app.MapPost("/api/conversations/log", async (ConversationLogRequest req, AppDbContext db) =>
 {
-    conversationLog.Add(new ConversationLogEntry(
-        req.UserId,
-        req.Channel,
-        req.Message,
-        req.Response,
-        req.Summary,
-        DateTime.UtcNow
-    ));
+    db.ConversationLogs.Add(new ConversationLog
+    {
+        UserId = req.UserId,
+        Channel = req.Channel,
+        Message = req.Message,
+        Response = req.Response,
+        Summary = req.Summary,
+        At = DateTime.UtcNow
+    });
+    await db.SaveChangesAsync();
     return Results.Ok(new { ok = true });
+});
+
+// GET: devuelve todas las conversaciones desde la base
+app.MapGet("/api/conversations/log", async (AppDbContext db) =>
+{
+    var list = await db.ConversationLogs
+        .OrderByDescending(x => x.At)
+        .ToListAsync();
+    return Results.Ok(list);
 });
 
 app.Run();
@@ -58,4 +75,3 @@ app.Run();
 record ChatRequest(string? UserId, string Message, string? Channel);
 record ChatResponse(string Answer, object? Sources, string? Summary);
 record ConversationLogRequest(string? UserId, string? Channel, string? Message, string? Response, string? Summary);
-record ConversationLogEntry(string? UserId, string? Channel, string? Message, string? Response, string? Summary, DateTime At);
