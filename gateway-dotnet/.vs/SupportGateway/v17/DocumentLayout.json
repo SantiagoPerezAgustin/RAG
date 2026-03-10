@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\santi\\Desktop\\Work\\(RAG)\\gateway-dotnet\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D58C99A0-76EF-409C-AABD-1213F42FA066}|SupportGateway.Api\\SupportGateway.Api.csproj|c:\\users\\santi\\desktop\\work\\(rag)\\gateway-dotnet\\supportgateway.api\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D58C99A0-76EF-409C-AABD-1213F42FA066}|SupportGateway.Api\\SupportGateway.Api.csproj|solutionrelative:supportgateway.api\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D58C99A0-76EF-409C-AABD-1213F42FA066}|SupportGateway.Api\\SupportGateway.Api.csproj|c:\\users\\santi\\desktop\\work\\(rag)\\gateway-dotnet\\supportgateway.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{D58C99A0-76EF-409C-AABD-1213F42FA066}|SupportGateway.Api\\SupportGateway.Api.csproj|solutionrelative:supportgateway.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D58C99A0-76EF-409C-AABD-1213F42FA066}|SupportGateway.Api\\SupportGateway.Api.csproj|c:\\users\\santi\\desktop\\work\\(rag)\\gateway-dotnet\\supportgateway.api\\supportgateway.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{D58C99A0-76EF-409C-AABD-1213F42FA066}|SupportGateway.Api\\SupportGateway.Api.csproj|solutionrelative:supportgateway.api\\supportgateway.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D58C99A0-76EF-409C-AABD-1213F42FA066}|SupportGateway.Api\\SupportGateway.Api.csproj|c:\\users\\santi\\desktop\\work\\(rag)\\gateway-dotnet\\supportgateway.api\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D58C99A0-76EF-409C-AABD-1213F42FA066}|SupportGateway.Api\\SupportGateway.Api.csproj|solutionrelative:supportgateway.api\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D58C99A0-76EF-409C-AABD-1213F42FA066}|SupportGateway.Api\\SupportGateway.Api.csproj|c:\\users\\santi\\desktop\\work\\(rag)\\gateway-dotnet\\supportgateway.api\\data\\conversationlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,13 +78,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\Work\\(RAG)\\gateway-dotnet\\SupportGateway.Api\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "SupportGateway.Api\\Data\\AppDbContext.cs",
               "ToolTip": "C:\\Users\\santi\\Desktop\\Work\\(RAG)\\gateway-dotnet\\SupportGateway.Api\\Data\\AppDbContext.cs",
               "RelativeToolTip": "SupportGateway.Api\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA9wAQAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-09T22:17:30.2Z",
               "EditorCaption": ""
@@ -99,12 +99,11 @@
               "RelativeToolTip": "SupportGateway.Api\\Data\\ConversationLog.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-09T22:16:55.411Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-09T22:16:55.411Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\Work\\(RAG)\\gateway-dotnet\\SupportGateway.Api\\Program.cs",
               "RelativeDocumentMoniker": "SupportGateway.Api\\Program.cs",
@@ -112,12 +111,11 @@
               "RelativeToolTip": "SupportGateway.Api\\Program.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAYwBgAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T19:46:52.907Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-05T19:46:52.907Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\Work\\(RAG)\\gateway-dotnet\\SupportGateway.Api\\appsettings.json",
               "RelativeDocumentMoniker": "SupportGateway.Api\\appsettings.json",
@@ -130,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "SupportGateway.Api.csproj",
               "DocumentMoniker": "C:\\Users\\santi\\Desktop\\Work\\(RAG)\\gateway-dotnet\\SupportGateway.Api\\SupportGateway.Api.csproj",
               "RelativeDocumentMoniker": "SupportGateway.Api\\SupportGateway.Api.csproj",
@@ -138,8 +136,7 @@
               "RelativeToolTip": "SupportGateway.Api\\SupportGateway.Api.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-05T19:44:52.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-05T19:44:52.595Z"
             }
           ]
         }

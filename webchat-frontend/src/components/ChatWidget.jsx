@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { sendMessage } from "../api/chatApi";
+import { sendMessage, logConversation } from "../api/chatApi";
 import MessageBubble from "./MessageBubble";
 
 export default function ChatWidget() {
@@ -19,6 +19,13 @@ export default function ChatWidget() {
         ...prev,
         { role: "assistant", content: data.answer },
       ]);
+      logConversation({
+        userId: "web-user",
+        channel: "web",
+        message: text,
+        response: data.answer,
+        summary: data.summary ?? "",
+      }).catch(() => {});
     } catch (e) {
       setMessages((prev) => [
         ...prev,
