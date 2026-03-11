@@ -84,7 +84,7 @@
               "RelativeDocumentMoniker": "SupportGateway.Api\\Data\\AppDbContext.cs",
               "ToolTip": "C:\\Users\\santi\\Desktop\\Work\\(RAG)\\gateway-dotnet\\SupportGateway.Api\\Data\\AppDbContext.cs",
               "RelativeToolTip": "SupportGateway.Api\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA9wAQAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAowAQAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-09T22:17:30.2Z",
               "EditorCaption": ""
@@ -123,8 +123,7 @@
               "RelativeToolTip": "SupportGateway.Api\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-05T19:45:20.829Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-05T19:45:20.829Z"
             },
             {
               "$type": "Document",
