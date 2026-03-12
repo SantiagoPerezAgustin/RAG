@@ -28,23 +28,29 @@ var app = builder.Build();
 app.UseCors();
 
 // Proxy: POST /api/chat -> Python /chat
+// Proxy: POST /api/chat -> Python /chat
 app.MapPost("/api/chat", async (HttpContext context, IHttpClientFactory factory) =>
 {
     var client = factory.CreateClient("Python");
     var body = await context.Request.ReadFromJsonAsync<ChatRequest>();
     if (body?.Message == null)
         return Results.BadRequest(new { detail = "message required" });
-
-    var response = await client.PostAsJsonAsync("/chat", new { message = body.Message, user_id = body.UserId, channel = body.Channel });
+    var payload = new
+    {
+        message = body.Message,
+        user_id = body.UserId,
+        channel = body.Channel,
+        history = body.History
+    };
+    var response = await client.PostAsJsonAsync("/chat", payload);
     if (!response.IsSuccessStatusCode)
         return Results.Json(new { detail = await response.Content.ReadAsStringAsync() }, statusCode: (int)response.StatusCode);
-
     var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
     var data = await response.Content.ReadFromJsonAsync<ChatResponse>(options);
     return Results.Ok(data);
 });
 
-// POST: guarda conversación en SQLite
+// POST: guarda conversaciï¿½n en SQLite
 app.MapPost("/api/conversations/log", async (ConversationLogRequest req, AppDbContext db) =>
 {
     db.ConversationLogs.Add(new ConversationLog
@@ -72,6 +78,7 @@ app.MapGet("/api/conversations/log", async (AppDbContext db) =>
 app.Run();
 
 // DTOs
-record ChatRequest(string? UserId, string Message, string? Channel);
+record ChatMessage(string Role, string Content);
+record ChatRequest(string? UserId, string Message, string? Channel, List<ChatMessage>? History);
 record ChatResponse(string Answer, object? Sources, string? Summary);
 record ConversationLogRequest(string? UserId, string? Channel, string? Message, string? Response, string? Summary);

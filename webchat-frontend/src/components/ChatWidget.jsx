@@ -10,15 +10,20 @@ export default function ChatWidget() {
   async function handleSend() {
     const text = input.trim();
     if (!text || loading) return;
+
     setInput("");
     setMessages((prev) => [...prev, { role: "user", content: text }]);
     setLoading(true);
+
     try {
-      const data = await sendMessage(text);
+      const history = messages.slice(-10);
+      const data = await sendMessage({ message: text, history });
+
       setMessages((prev) => [
         ...prev,
         { role: "assistant", content: data.answer },
       ]);
+
       logConversation({
         userId: "web-user",
         channel: "web",
@@ -27,9 +32,16 @@ export default function ChatWidget() {
         summary: data.summary ?? "",
       }).catch(() => {});
     } catch (e) {
+      const msg = e?.message || "";
+      const friendlyMessage =
+        msg.toLowerCase().includes("timeout") ||
+        msg.toLowerCase().includes("time-out")
+          ? "Estoy tardando más de lo normal. Probá de nuevo en unos segundos."
+          : "Hubo un error al responder. Si persiste, contactá a soporte.";
+
       setMessages((prev) => [
         ...prev,
-        { role: "assistant", content: "Error: " + e.message },
+        { role: "assistant", content: friendlyMessage },
       ]);
     } finally {
       setLoading(false);
