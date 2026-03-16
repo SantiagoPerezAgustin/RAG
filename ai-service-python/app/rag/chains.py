@@ -5,8 +5,13 @@ from langchain_core.runnables import RunnablePassthrough
 from app.config import OLLAMA_BASE_URL, OLLAMA_LLM_MODEL
 from app.rag.retriever import get_retriever
 
-SYSTEM_PROMPT = """Eres un asistente de soporte técnico nivel 1. Responde en español de forma clara y breve.
-Si la información del contexto no es suficiente, di que no tienes esa información y sugiere contactar a soporte nivel 2.
+SYSTEM_PROMPT = """Eres un asistente de soporte técnico. Responde siempre en español de forma clara y breve.
+
+Usa el contexto de documentación técnica que se muestra abajo cuando sea relevante para la pregunta del usuario.
+Si el contexto no contiene exactamente la respuesta, igual intenta dar una respuesta útil basándote en tu conocimiento general y en buenas prácticas de soporte.
+
+No digas que no tienes información salvo que realmente no puedas ayudar. Solo en esos casos podés sugerir que la persona contacte a soporte humano, pero sin mencionar niveles de soporte (nivel 1, nivel 2, etc.).
+
 Contexto (documentación técnica):
 {context}
 """
